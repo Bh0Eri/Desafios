@@ -1,10 +1,10 @@
-package Livraria;
+package Livraria.Users;
 
 public abstract class Usuario {
     private int id;
-    String nome;
+    public String nome;
     String email;
-    int idF;
+    public int idF;
 
     public Usuario(int id, String nome, String email, int idF) {
         this.id = id;
@@ -13,6 +13,13 @@ public abstract class Usuario {
         this.idF = idF;
     }
 
-    public abstract void getLimitEmprestimos(int limite);
+    public abstract int getLimitEmprestimos();
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }
